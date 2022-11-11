@@ -12,10 +12,21 @@ const  audio7 = document.getElementById("Z");
 const  audio8 = document.getElementById("X");
 const audio9 = document.getElementById("C");
 togglebutton.addEventListener("click", ToggleMe)
+function changeBackground() {
+  drumpad[0].style.backgroundColor = "#B33434B5"
+  drumpad[1].style.backgroundColor = "#839100"
+  drumpad[2].style.backgroundColor = "#913b00"
+  drumpad[3].style.backgroundColor = "#91004c"
+  drumpad[4].style.backgroundColor = "#350980"
+  drumpad[5].style.backgroundColor = "#700b48"
+  drumpad[6].style.backgroundColor = "#0f6ce7"
+  drumpad[7].style.backgroundColor = "#69e810"
+  drumpad[8].style.backgroundColor = "#707300"
+}
 function ToggleMe() {
   indicator.classList.toggle("active")
   if (!indicator.classList.contains("active")) {
-      display.innerHTML = ""
+      display.innerHTML = "OFF"
   }
   else {
     display.innerHTML = "ON"
@@ -77,3 +88,4 @@ function play9() {
     display.innerHTML = drumpad[8].id
   }
 }
+changeBackground()
